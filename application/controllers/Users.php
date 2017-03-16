@@ -38,4 +38,8 @@ class Users extends CI_Controller {
     $captcha = create_captcha($data);
     $this->load->view('page_reset',$captcha);
 	}
+  function loginSeccess(){
+ 
+    $this->load->view('page_login_success');
+  }
 }
