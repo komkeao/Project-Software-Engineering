@@ -17,7 +17,7 @@ class Donate extends CI_Controller{
     $ddetail = $this->input->post('ddetail');
     $dsize= $this->input->post('dsize');
     $dweight = $this->input->post('dweight');
-    $damount = $this->input->post('damount');
+    $damount = $this->input->post('amount');
     $dtype = $this->input->post('donate_type');
     $usid = '1';
     $ddate = date("Y-m-d H:i:s");
@@ -37,7 +37,7 @@ class Donate extends CI_Controller{
 
 
     $config['upload_path'] = 'images/';
-    $config['allowed_types'] = 'gif|jpg|png';
+    $config['allowed_types'] = 'gif|jpg|png|bmp';
 
     $this->load->library('upload', $config);
     $upload_error = array();
@@ -51,7 +51,7 @@ class Donate extends CI_Controller{
           $donate_id = $this->UploadDAO->get_last_donate();
           $pic_name = $usid . "_" . $this->UploadDAO->get_last_pic() . substr($_FILES['fileUpload']['name'][$i],strlen($_FILES['fileUpload']['name'][$i])-4,4);
 
-            $_FILES['userfile']['name']= $pic_name;
+            $_FILES['userfile']['name']= $_FILES['fileUpload']['name'][$i];
             $_FILES['userfile']['type']= $_FILES['fileUpload']['type'][$i];
             $_FILES['userfile']['tmp_name']= $_FILES['fileUpload']['tmp_name'][$i];
             $_FILES['userfile']['error']= $_FILES['fileUpload']['error'][$i];

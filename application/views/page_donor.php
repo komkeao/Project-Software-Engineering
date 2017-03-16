@@ -8,35 +8,11 @@
             <div class="row">
 
                 <!--Sidebar-->
-                <div class="col-lg-3">
-
-                    <div class="widget-wrapper">
-                        <div class="list-group">
-                            <a href="#" class="list-group-item active">1</a>
-                            <a href="#" class="list-group-item">2</a>
-                            <a href="#" class="list-group-item">3</a>
-                        </div>
-                    </div>
-
-                    <div class="widget-wrapper">
-                        <div class="card">
-                            <div class="card-block">
-                                <p>information</p>
-                                <p>information</p>
-                                <p>information</p>
-                                <p>information</p>
-                                <p>information</p>
-                                <p>information</p>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+                <div class="col-lg-2"></div>
                 <!--/.Sidebar-->
 
                 <!--Main column-->
-                <div class="col-lg-9">
+                <div class="col-lg-8">
 
                     <!--First row-->
                     <div class="row">
@@ -66,10 +42,10 @@
                                           <input type="text" class="form-control" name="dname" onblur="InvalidTbName(this);" required>
                                           <label>ชื่อของที่บริจาค :</label>
                                       </div>
-                                     <font color="red" size="2"> <p id="alertdname" ></p></font> 
+                                     <font color="red" size="2"> <p id="alertdname" ></p></font>
                                   </div>
                             <div class="col-md-5"></div>
-                            
+
                           </div>
                           <br>
                           <div class="row">
@@ -79,8 +55,8 @@
                                           <textarea type="text" class="md-textarea" name="ddetail"  oninvalid="InvalidTbDetail(this);" required></textarea>
                                           <label>รายละเอียด :</label>
                                       </div>
-                                      <font color="red" size="2"> <p id="alertddetail" ></p></font> 
-                                  </div> 
+                                      <font color="red" size="2"> <p id="alertddetail" ></p></font>
+                                  </div>
                             <div class="col-md-1"></div>
                           </div>
                           <br>
@@ -91,14 +67,14 @@
                               <input type="text" class="form-control" name="dsize" oninput="validateNumberSize(this);" maxlength="10"  required>
                               <label>ขนาด : (หน่วยเป็นเซนติเมตร)</label>
                             </div>
-                            <font color="red" size="2"> <p id="alertdsize" ></p></font> 
+                            <font color="red" size="2"> <p id="alertdsize" ></p></font>
                             </div>
                             <div class="col-md-5">
                                 <div class="md-form">
                                   <input type="text" class="form-control" name="dweight" oninput="validateNumberWeight(this);" maxlength="10"  required >
                                   <label>น้ำหนัก : (หน่วยเป็นกรัม)</label>
                                 </div>
-                                <font color="red" size="2"> <p id="alertdweight" ></p></font> 
+                                <font color="red" size="2"> <p id="alertdweight" ></p></font>
                             </div>
                             <div class="col-md-1"></div>
                           </div>
@@ -107,10 +83,10 @@
                             <div class="col-md-1"></div>
                                   <div class="col-md-6">
                                       <div class="md-form">
-                                          <input type="number" class="form-control" name="damount" min="0" max="100" required>
+                                          <input type="number" class="form-control" name="amount" min="0" max="100" required>
                                           <label>จำนวน :</label>
                                       </div>
-                                      <font color="red" size="2"> <p id="alertdamount" ></p></font> 
+                                      <font color="red" size="2"> <p id="alertdamount" ></p></font>
                                   </div>
                             <div class="col-md-5"></div>
                           </div>
@@ -127,7 +103,7 @@
                                         }
                                          ?>
                                     </select>
-                                    <font color="red" size="2"> <p id="alertdtype" ></p></font> 
+                                    <font color="red" size="2"> <p id="alertdtype" ></p></font>
                                   </div>
                             <div class="col-md-5"></div>
                           </div>
@@ -157,6 +133,7 @@
 
 
                 </div>
+                <div class="col-lg-2"></div>
                 <!--/.Main column-->
 
             </div>
@@ -226,7 +203,7 @@ function InvalidTbName() {
     }
     return true;
   }
-   
+
   function checkValidate(){
     InvalidTbName();
     InvalidTbDetail();

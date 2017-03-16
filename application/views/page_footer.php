@@ -1,20 +1,14 @@
 <!--Footer-->
-<footer class="page-footer center-on-small-only">
+<footer class="page-footer">
 
     <!--Call to action-->
-    <div class="call-to-action">
-        <h4>รักเด็ก | ให้แบ่งปัน</h4>
+    <div style="text-align:center">
+        <h4>WeShare4U</h4>
+        2017<br>
+        group11@WeShare4U.com
     </div>
     <!--/.Call to action-->
 
-    <!--Copyright-->
-    <div class="footer-copyright">
-        <div class="container-fluid">
-            © 2015 Copyright: <a href="http://www.MDBootstrap.com"> MDBootstrap.com </a>
-
-        </div>
-    </div>
-    <!--/.Copyright-->
 
 </footer>
 <!--/.Footer-->

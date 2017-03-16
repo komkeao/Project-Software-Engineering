@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://10.199.66.227/SoftEn2017/group11/SoftEn/';
+$config['base_url'] = 'http://localhost/SoftEn/';
 
 /*
 |--------------------------------------------------------------------------

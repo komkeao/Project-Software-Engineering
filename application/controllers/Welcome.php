@@ -22,7 +22,8 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('page_index');
 	}
-	function register(){
-		$this->load->view('page_register');
+	function test()
+	{
+		$this->load->view('page_test');
 	}
 }
