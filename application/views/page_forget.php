@@ -12,13 +12,13 @@
                     <h2 class="h2-responsive">ลืมรหัสผ่าน</h2>
                 </div>
                 <br>
-              <form action="" method="post" >
+              <form action="<?= base_url() ?>home/reset_password" method="post" >
                 <div class="row">
                   <div class="col-md-1"></div>
                         <div class="col-md-6">
                           <div class="md-form">
                             <i class="fa fa-envelope prefix"></i>
-                            <input type="email" class="form-control" name="email" autocomplete="off" required>
+                            <input type="email" class="form-control" name="email"  required>
                             <label>อีเมล์ :</label>
                           </div>
                         </div>
@@ -27,8 +27,8 @@
                 <div class="row">
                   <div class="col-md-1"></div>
                         <div class="col-md-6">
-                          <label>ประเภท</label>
-                          <select required="" class="mdb-select colorful-select dropdown-primary">
+                          <label>คำถาม</label>
+                          <select required="" class="mdb-select colorful-select dropdown-primary" name="question">
                           <option value="" selected="true" disabled="">กรุณาเลือกคำถาม</option>
                               <?php
                               foreach ($qustion_list as $row){
@@ -44,12 +44,13 @@
                         <div class="col-md-6">
                           <div class="md-form">
                             <i class="fa fa-lock prefix"></i>
-                            <input type="text" class="form-control" name="answer" autocomplete="off" required >
+                            <input type="text" class="form-control" name="answer"  required >
                             <label>คำตอบ :</label>
                           </div>
                         </div>
                   <div class="col-md-5"></div>
                 </div>
+                <div class="row"><div class="col-md-2"></div><div class="col-md-6"><font color="red" size="3px"><?= $msgerror ?></font></div></div><br>
                 <div class="row">
                   <div class="col-md-2"></div>
                         <div class="col-md-3">

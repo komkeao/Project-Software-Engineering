@@ -12,48 +12,41 @@
                     <h2 class="h2-responsive">รีเซ็ตรหัสผ่าน</h2>
                 </div>
                 <br>
-              <form action="" method="post" >
+              <form action="<?= base_url() ?>user/update_password" method="post" >
                 <div class="row">
                   <div class="col-md-1"></div>
                         <div class="col-md-5">
                           <div class="md-form">
                             <i class="fa fa-lock prefix"></i>
-                            <input type="email" class="form-control" name="password" autocomplete="off" required>
-                            <label>รหัสผ่่าน :</label>
+                            <input type="password" class="form-control" name="password"  required>
+                            <label>รหัสผ่านใหม่ :</label>
                           </div>
                         </div>
                   <div class="col-md-5">
                     <div class="md-form">
                       <i class="fa fa-lock prefix"></i>
-                      <input type="password" class="form-control" name="confirm_password" autocomplete="off" required>
-                      <label>ยืนยันรหัสผ่าน :</label>
+                      <input type="password" class="form-control" name="confirm_password"  required>
+                      <input type="hidden" class="form-control" name="email"  value="<?php if(isset($_SESSION['email'])){ echo $_SESSION['email']; }else{ echo $_POST['email']; } ?>" required>
+                      <label>ยืนยันรหัสผ่านใหม่ :</label>
                     </div>
                   </div>
                   <div class="col-md-1"></div>
                 </div>
-                <div class="row">
-                  <div class="col-md-2"></div>
-                        <div class="col-md-5">
-                          <?php echo $image; ?>
-                        </div>
-                  <div class="col-md-5"></div>
-                </div>
-                <br>
-                <div class="row">
-                  <div class="col-md-1"></div>
-                        <div class="col-md-6">
-                          <div class="md-form">
-                            <i class="fa fa-lock prefix"></i>
-                            <input type="text" class="form-control" name="captcha" autocomplete="off" required value="<?php echo $word; ?>">
-                            <label>Captcha :</label>
-                          </div>
-                        </div>
-                  <div class="col-md-5"></div>
-                </div>
+                <div class="row"><div class="col-md-2"></div><div class="col-md-6">
+                  <font color="green" size="3px">
+                      <?php if(validation_errors()) { ?>
+                      <div class="alert alert-warning">
+                      <?php echo validation_errors(); ?>
+                      </div>
+                      <?php }else{ ?>
+                      <p><?= $msgerror ?></p>
+                      <?php } ?>
+                  </font>
+                </div></div><br>
                 <div class="row">
                   <div class="col-md-2"></div>
                         <div class="col-md-3">
-                          <button type="submit" class="btn btn-primary">Submit</button>
+                          <button type="submit"  class="btn btn-primary">Submit</button>
                         </div>
                   <div class="col-md-7"></div>
                 </div>
@@ -64,5 +57,4 @@
         </div>
     </div>
 </main>
-
 <?php $this->load->view('page_footer'); ?>

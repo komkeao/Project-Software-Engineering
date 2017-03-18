@@ -1,70 +1,43 @@
-<?php $this->load->view('page_header'); ?>
-<main>
-
-    <!--Main layout-->
-    <div class="container">
-        <div class="row">
-
-            <div class="col-lg-2"></div>
-            <div class="col-lg-8">
-              <div class="card card-block" id="loginForm">
-                <div class="divider-new">
-                    <h2 class="h2-responsive">เข้าสู่ระบบ</h2>
-                </div>
-                <br>
-              <form action="" method="post" >
-                <div class="row">
-                  <div class="col-md-1"></div>
-                        <div class="col-md-5">
-                          <div class="md-form">
-                            <i class="fa fa-envelope prefix"></i>
-                            <input type="email" class="form-control" name="email" autocomplete="off" required>
-                            <label>อีเมล์ :</label>
-                          </div>
-                        </div>
-                  <div class="col-md-5">
-                    <div class="md-form">
-                      <i class="fa fa-lock prefix"></i>
-                      <input type="password" class="form-control" name="password" autocomplete="off" required>
-                      <label>รหัสผ่าน :</label>
-                    </div>
-                  </div>
-                  <div class="col-md-1"></div>
-                </div>
-                <div class="row">
-                  <div class="col-md-2"></div>
-                        <div class="col-md-5">
-                          <?php echo $image; ?>
-                        </div>
-                  <div class="col-md-5"></div>
-                </div>
-                <br>
-                <div class="row">
-                  <div class="col-md-1"></div>
-                        <div class="col-md-6">
-                          <div class="md-form">
-                            <i class="fa fa-lock prefix"></i>
-                            <input type="text" class="form-control" name="captcha" autocomplete="off" required value="<?php echo $word; ?>">
-                            <label>Captcha :</label>
-                          </div>
-                        </div>
-                  <div class="col-md-5"></div>
-                </div>
-                <div class="row">
-                  <div class="col-md-2"></div>
-                        <div class="col-md-3">
-                          <button type="submit" class="btn btn-primary">Submit</button>
-                        </div>
-                  <div class="col-md-7">
-                    <a href="<?php echo base_url(); ?>index.php/users/forget">ลืมรหัสผ่านใช่หรือไม่ ?</a>
-                  </div>
-                </div>
-            </form>
-          </div>
+<div class="modal fade modal-ext" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <!--Content-->
+        <div class="modal-content">
+            <!--Header-->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h3 class="w-100"><i class="fa fa-user"></i> เข้าสู่ระบบ</h3>
             </div>
-            <div class="col-lg-2"></div>
-        </div>
-    </div>
-</main>
+            <!--Body-->
+            <form action="<?= base_url() ?>index.php/home/check_login" method="post" id="login_form">
+            <div class="modal-body">
+                <div class="md-form">
+                    <i class="fa fa-envelope prefix"></i>
+                    <input type="email" name="email" class="form-control" required>
+                    <label for="form2">อีเมล์</label>
+                </div>
+                <div class="md-form">
+                    <i class="fa fa-lock prefix"></i>
+                    <input type="password" name="password" class="form-control" required>
+                    <label for="form3">รหัสผ่าน</label>
+                </div>
+                <div class="md-form" align="center">
+                  <?php echo $image; ?>
+                </div>
+                <div class="md-form">
+                  <i class="fa fa-lock prefix"></i>
+                  <input type="text" class="form-control" name="captcha" required value="<?php echo $word; ?>">
+                  <label>Captcha :</label>
+                </div>
+                <div class="text-center">
+                    <button type="submit" id="btn-login" class="btn btn-primary btn-lg">เข้าสู่ระบบ</button>
+                    <p><a href="<?php echo base_url(); ?>home/forget_password">ลืมรหัสผ่านใช่หรือไม่?</a></p>
+                </div>
+            </div>
+          </form>
 
-<?php $this->load->view('page_footer'); ?>
+        </div>
+        <!--/.Content-->
+    </div>
+</div>
