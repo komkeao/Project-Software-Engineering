@@ -6,7 +6,7 @@ Library    Selenium2Library
 
 #CONFIG
 ${BROWSER}    Chrome
-${DELAY}    1
+${DELAY}    0
 ${URL WELCOME}    http://10.199.66.227/SoftEn2017/group11/
 
 
@@ -387,3 +387,4 @@ Login : Reset Password Special Invalid
     Wait Until Page Contains    ${VALID MACHING PASSWORD}
     Capture Page Screenshot    filename=selenium-screenshot-{index}.png
     #Click Link    ${URL LOGOUT} 
+    [Teardown]    Close Browser
