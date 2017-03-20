@@ -16,6 +16,10 @@ main {
     padding-top: 3rem;
     padding-bottom: 2rem;
     font-size: 20px;
+    background-image: url('../images/img_form/donate.png');
+    background-repeat: no-repeat;
+    background-position: 4% 100%;
+    background-size: 250px 370px;
 }
 
 .widget-wrapper {
@@ -34,7 +38,7 @@ main {
 }
 
   .navbar {
-    background-color: #d50000 ;
+    background-color: #b50019 ;
 }
 
 footer.page-footer {
@@ -43,7 +47,10 @@ footer.page-footer {
   bottom:0;
   width: 100%;
   height: 105px;
-  background-color: #d50000;
+  background-color: #b50019;
+}
+div.main-holder {
+  background-color: #b7aaac;
 }
 
 body {
@@ -56,7 +63,4 @@ body {
     background-repeat: no-repeat;
     background-position: 90% 20%;
     background-size: 250px 250px;
-}
-#loginForm {
-
 }

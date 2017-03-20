@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170321 03:28:04.109" generator="Robot 3.0.2 (Python 2.7.12 on win32)">
+<suite source="D:\xampp\htdocs\SoftEn\application\controllers\sprint1.robot" id="s1" name="Sprint1">
+<test id="s1-t1" name="Open Browser And Initial Config:">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${URL WELCOME}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170321 03:28:04.255" level="INFO">Opening browser 'Chrome' to base url 'http://10.199.66.227/SoftEn2017/group11/'</msg>
+<status status="PASS" endtime="20170321 03:28:10.669" starttime="20170321 03:28:04.255"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${VALID WELCOME PAGE}</arg>
+</arguments>
+<status status="PASS" endtime="20170321 03:28:10.704" starttime="20170321 03:28:10.671"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+<arg>filename=selenium-screenshot-{index}.png</arg>
+</arguments>
+<msg timestamp="20170321 03:28:11.954" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170321 03:28:11.954" starttime="20170321 03:28:10.705"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20170321 03:28:11.956" starttime="20170321 03:28:11.955"></status>
+</kw>
+<status status="PASS" endtime="20170321 03:28:11.956" critical="yes" starttime="20170321 03:28:04.254"></status>
+</test>
+<test id="s1-t2" name="Go To Login Modal">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${LOGIN BUTTON}</arg>
+</arguments>
+<msg timestamp="20170321 03:28:11.960" level="INFO">Clicking button 'loginModal'.</msg>
+<status status="PASS" endtime="20170321 03:28:16.092" starttime="20170321 03:28:11.959"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${VALID LOGIN MODAL}</arg>
+</arguments>
+<status status="PASS" endtime="20170321 03:28:17.125" starttime="20170321 03:28:16.093"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+<arg>filename=selenium-screenshot-{index}.png</arg>
+</arguments>
+<msg timestamp="20170321 03:28:18.251" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170321 03:28:18.252" starttime="20170321 03:28:17.126"></status>
+</kw>
+<status status="PASS" endtime="20170321 03:28:18.252" critical="yes" starttime="20170321 03:28:11.958"></status>
+</test>
+<test id="s1-t3" name="Go To Forget Page">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${FORGET LINK}</arg>
+</arguments>
+<msg timestamp="20170321 03:28:18.255" level="INFO">Opening url 'http://10.199.66.227/SoftEn2017/group11/index.php/home/forget_password'</msg>
+<status status="PASS" endtime="20170321 03:28:20.910" starttime="20170321 03:28:18.255"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${VALID FORGET PAGE CONTAINS}</arg>
+</arguments>
+<status status="PASS" endtime="20170321 03:28:21.935" starttime="20170321 03:28:20.911"></status>
+</kw>
+<kw name="Location Should Be" library="Selenium2Library">
+<doc>Verifies that current URL is exactly `url`.</doc>
+<arguments>
+<arg>${URL FORGET}</arg>
+</arguments>
+<msg timestamp="20170321 03:28:22.943" level="INFO">Current location is 'http://10.199.66.227/SoftEn2017/group11/index.php/home/forget_password'.</msg>
+<status status="PASS" endtime="20170321 03:28:22.943" starttime="20170321 03:28:21.936"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+<arg>filename=selenium-screenshot-{index}.png</arg>
+</arguments>
+<msg timestamp="20170321 03:28:24.066" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170321 03:28:24.067" starttime="20170321 03:28:22.944"></status>
+</kw>
+<status status="PASS" endtime="20170321 03:28:24.067" critical="yes" starttime="20170321 03:28:18.254"></status>
+</test>
+<test id="s1-t4" name="Forget Password All Input Valid">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${INPUT FORGET EMAIL}</arg>
+<arg>${VALID INPUT FORGET EMAIL}</arg>
+</arguments>
+<msg timestamp="20170321 03:28:24.071" level="INFO">Typing text 'komkeao@weshare4u.com' into text field 'emailforget'</msg>
+<status status="PASS" endtime="20170321 03:28:27.225" starttime="20170321 03:28:24.070"></status>
+</kw>
+<kw name="Select From List By Value" library="Selenium2Library">
+<doc>Selects `*values` from list identified by `locator`</doc>
+<arguments>
+<arg>${INPUT FORGET QUESTION}</arg>
+<arg>${VALID INPUT FORGET QUESTION}</arg>
+</arguments>
+<msg timestamp="20170321 03:28:27.226" level="INFO">Selecting value(s) '6' from list 'question'.</msg>
+<status status="PASS" endtime="20170321 03:28:33.361" starttime="20170321 03:28:27.226"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${INPUT FORGET ANSWER}</arg>
+<arg>${VALID INPUT FORGET ANSWER}</arg>
+</arguments>
+<msg timestamp="20170321 03:28:33.363" level="INFO">Typing text 'kku' into text field 'answer'</msg>
+<status status="PASS" endtime="20170321 03:28:36.475" starttime="20170321 03:28:33.362"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${FORGET BUTTON}</arg>
+</arguments>
+<msg timestamp="20170321 03:28:36.476" level="INFO">Clicking button 'submitForm'.</msg>
+<status status="PASS" endtime="20170321 03:28:40.598" starttime="20170321 03:28:36.476"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${VALID RESET PASSWORD MSG}</arg>
+</arguments>
+<status status="PASS" endtime="20170321 03:28:43.346" starttime="20170321 03:28:40.599"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+<arg>filename=selenium-screenshot-{index}.png</arg>
+</arguments>
+<msg timestamp="20170321 03:28:44.473" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170321 03:28:44.474" starttime="20170321 03:28:43.346"></status>
+</kw>
+<status status="PASS" endtime="20170321 03:28:44.474" critical="yes" starttime="20170321 03:28:24.070"></status>
+</test>
+<test id="s1-t5" name="Forget Password Email Pattern Invalid">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${FORGET LINK}</arg>
+</arguments>
+<msg timestamp="20170321 03:28:44.478" level="INFO">Opening url 'http://10.199.66.227/SoftEn2017/group11/index.php/home/forget_password'</msg>
+<status status="PASS" endtime="20170321 03:28:47.101" starttime="20170321 03:28:44.477"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${INPUT FORGET EMAIL}</arg>
+<arg>${INVALID PATTERN INPUT FORGET EMAIL}</arg>
+</arguments>
+<msg timestamp="20170321 03:28:47.102" level="INFO">Typing text 'komkeao@weshare4u.' into text field 'emailforget'</msg>
+<status status="PASS" endtime="20170321 03:28:50.228" starttime="20170321 03:28:47.102"></status>
+</kw>
+<kw name="Select From List By Value" library="Selenium2Library">
+<doc>Selects `*values` from list identified by `locator`</doc>
+<arguments>
+<arg>${INPUT FORGET QUESTION}</arg>
+<arg>${VALID INPUT FORGET QUESTION}</arg>
+</arguments>
+<msg timestamp="20170321 03:28:50.229" level="INFO">Selecting value(s) '6' from list 'question'.</msg>
+<status status="PASS" endtime="20170321 03:28:56.364" starttime="20170321 03:28:50.228"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${INPUT FORGET ANSWER}</arg>
+<arg>${VALID INPUT FORGET ANSWER}</arg>
+</arguments>
+<msg timestamp="20170321 03:28:56.366" level="INFO">Typing text 'kku' into text field 'answer'</msg>
+<status status="PASS" endtime="20170321 03:28:59.473" starttime="20170321 03:28:56.365"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${FORGET BUTTON}</arg>
+</arguments>
+<msg timestamp="20170321 03:28:59.474" level="INFO">Clicking button 'submitForm'.</msg>
+<status status="PASS" endtime="20170321 03:29:03.605" starttime="20170321 03:28:59.474"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${RESET PASSWORD INVALID EMAIL PATTERN MSG}</arg>
+</arguments>
+<status status="PASS" endtime="20170321 03:29:04.629" starttime="20170321 03:29:03.605"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+<arg>filename=selenium-screenshot-{index}.png</arg>
+</arguments>
+<msg timestamp="20170321 03:29:05.754" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170321 03:29:05.754" starttime="20170321 03:29:04.629"></status>
+</kw>
+<status status="PASS" endtime="20170321 03:29:05.755" critical="yes" starttime="20170321 03:28:44.476"></status>
+</test>
+<test id="s1-t6" name="Forget Password Email Invalid">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${FORGET LINK}</arg>
+</arguments>
+<msg timestamp="20170321 03:29:05.758" level="INFO">Opening url 'http://10.199.66.227/SoftEn2017/group11/index.php/home/forget_password'</msg>
+<status status="PASS" endtime="20170321 03:29:08.527" starttime="20170321 03:29:05.758"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${INPUT FORGET EMAIL}</arg>
+<arg>${INVALID INPUT FORGET EMAIL}</arg>
+</arguments>
+<msg timestamp="20170321 03:29:08.528" level="INFO">Typing text 'komkeao@weshare4u.co.th' into text field 'emailforget'</msg>
+<status status="PASS" endtime="20170321 03:29:11.672" starttime="20170321 03:29:08.528"></status>
+</kw>
+<kw name="Select From List By Value" library="Selenium2Library">
+<doc>Selects `*values` from list identified by `locator`</doc>
+<arguments>
+<arg>${INPUT FORGET QUESTION}</arg>
+<arg>${VALID INPUT FORGET QUESTION}</arg>
+</arguments>
+<msg timestamp="20170321 03:29:11.673" level="INFO">Selecting value(s) '6' from list 'question'.</msg>
+<status status="PASS" endtime="20170321 03:29:17.803" starttime="20170321 03:29:11.672"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${INPUT FORGET ANSWER}</arg>
+<arg>${VALID INPUT FORGET ANSWER}</arg>
+</arguments>
+<msg timestamp="20170321 03:29:17.804" level="INFO">Typing text 'kku' into text field 'answer'</msg>
+<status status="PASS" endtime="20170321 03:29:20.906" starttime="20170321 03:29:17.804"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${FORGET BUTTON}</arg>
+</arguments>
+<msg timestamp="20170321 03:29:20.907" level="INFO">Clicking button 'submitForm'.</msg>
+<status status="PASS" endtime="20170321 03:29:25.034" starttime="20170321 03:29:20.906"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${FORGET PASSWORD INVALID MSG}</arg>
+</arguments>
+<status status="PASS" endtime="20170321 03:29:26.060" starttime="20170321 03:29:25.034"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+<arg>filename=selenium-screenshot-{index}.png</arg>
+</arguments>
+<msg timestamp="20170321 03:29:27.210" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170321 03:29:27.210" starttime="20170321 03:29:26.061"></status>
+</kw>
+<status status="PASS" endtime="20170321 03:29:27.211" critical="yes" starttime="20170321 03:29:05.757"></status>
+</test>
+<test id="s1-t7" name="Forget Password Question Invalid">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${FORGET LINK}</arg>
+</arguments>
+<msg timestamp="20170321 03:29:27.215" level="INFO">Opening url 'http://10.199.66.227/SoftEn2017/group11/index.php/home/forget_password'</msg>
+<status status="PASS" endtime="20170321 03:29:29.857" starttime="20170321 03:29:27.214"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${INPUT FORGET EMAIL}</arg>
+<arg>${VALID INPUT FORGET EMAIL}</arg>
+</arguments>
+<msg timestamp="20170321 03:29:29.858" level="INFO">Typing text 'komkeao@weshare4u.com' into text field 'emailforget'</msg>
+<status status="PASS" endtime="20170321 03:29:32.992" starttime="20170321 03:29:29.857"></status>
+</kw>
+<kw name="Select From List By Value" library="Selenium2Library">
+<doc>Selects `*values` from list identified by `locator`</doc>
+<arguments>
+<arg>${INPUT FORGET QUESTION}</arg>
+<arg>${INVALID INPUT FORGET QUESTION}</arg>
+</arguments>
+<msg timestamp="20170321 03:29:32.993" level="INFO">Selecting value(s) '5' from list 'question'.</msg>
+<status status="PASS" endtime="20170321 03:29:39.121" starttime="20170321 03:29:32.992"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${INPUT FORGET ANSWER}</arg>
+<arg>${VALID INPUT FORGET ANSWER}</arg>
+</arguments>
+<msg timestamp="20170321 03:29:39.122" level="INFO">Typing text 'kku' into text field 'answer'</msg>
+<status status="PASS" endtime="20170321 03:29:42.223" starttime="20170321 03:29:39.122"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${FORGET BUTTON}</arg>
+</arguments>
+<msg timestamp="20170321 03:29:42.224" level="INFO">Clicking button 'submitForm'.</msg>
+<status status="PASS" endtime="20170321 03:29:46.340" starttime="20170321 03:29:42.223"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${FORGET PASSWORD INVALID MSG}</arg>
+</arguments>
+<status status="PASS" endtime="20170321 03:29:47.365" starttime="20170321 03:29:46.340"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+<arg>filename=selenium-screenshot-{index}.png</arg>
+</arguments>
+<msg timestamp="20170321 03:29:48.491" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170321 03:29:48.491" starttime="20170321 03:29:47.366"></status>
+</kw>
+<status status="PASS" endtime="20170321 03:29:48.492" critical="yes" starttime="20170321 03:29:27.213"></status>
+</test>
+<test id="s1-t8" name="Forget Password Answer Invalid">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${FORGET LINK}</arg>
+</arguments>
+<msg timestamp="20170321 03:29:48.495" level="INFO">Opening url 'http://10.199.66.227/SoftEn2017/group11/index.php/home/forget_password'</msg>
+<status status="PASS" endtime="20170321 03:29:51.051" starttime="20170321 03:29:48.495"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${INPUT FORGET EMAIL}</arg>
+<arg>${VALID INPUT FORGET EMAIL}</arg>
+</arguments>
+<msg timestamp="20170321 03:29:51.052" level="INFO">Typing text 'komkeao@weshare4u.com' into text field 'emailforget'</msg>
+<status status="PASS" endtime="20170321 03:29:54.175" starttime="20170321 03:29:51.051"></status>
+</kw>
+<kw name="Select From List By Value" library="Selenium2Library">
+<doc>Selects `*values` from list identified by `locator`</doc>
+<arguments>
+<arg>${INPUT FORGET QUESTION}</arg>
+<arg>${VALID INPUT FORGET QUESTION}</arg>
+</arguments>
+<msg timestamp="20170321 03:29:54.176" level="INFO">Selecting value(s) '6' from list 'question'.</msg>
+<status status="PASS" endtime="20170321 03:30:00.296" starttime="20170321 03:29:54.175"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${INPUT FORGET ANSWER}</arg>
+<arg>${INVALID INPUT FORGET ANSWER}</arg>
+</arguments>
+<msg timestamp="20170321 03:30:00.299" level="INFO">Typing text 'kk1' into text field 'answer'</msg>
+<status status="PASS" endtime="20170321 03:30:03.469" starttime="20170321 03:30:00.298"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${FORGET BUTTON}</arg>
+</arguments>
+<msg timestamp="20170321 03:30:03.470" level="INFO">Clicking button 'submitForm'.</msg>
+<status status="PASS" endtime="20170321 03:30:07.585" starttime="20170321 03:30:03.469"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${FORGET PASSWORD INVALID MSG}</arg>
+</arguments>
+<status status="PASS" endtime="20170321 03:30:08.607" starttime="20170321 03:30:07.586"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+<arg>filename=selenium-screenshot-{index}.png</arg>
+</arguments>
+<msg timestamp="20170321 03:30:09.732" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170321 03:30:09.732" starttime="20170321 03:30:08.608"></status>
+</kw>
+<status status="PASS" endtime="20170321 03:30:09.733" critical="yes" starttime="20170321 03:29:48.494"></status>
+</test>
+<test id="s1-t9" name="Not Login : Reset Password All Input Valid">
+<kw name="Forget Password All Input Valid">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${FORGET LINK}</arg>
+</arguments>
+<msg timestamp="20170321 03:30:09.737" level="INFO">Opening url 'http://10.199.66.227/SoftEn2017/group11/index.php/home/forget_password'</msg>
+<status status="PASS" endtime="20170321 03:30:12.297" starttime="20170321 03:30:09.737"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${INPUT FORGET EMAIL}</arg>
+<arg>${VALID INPUT FORGET EMAIL}</arg>
+</arguments>
+<msg timestamp="20170321 03:30:12.298" level="INFO">Typing text 'komkeao@weshare4u.com' into text field 'emailforget'</msg>
+<status status="PASS" endtime="20170321 03:30:15.438" starttime="20170321 03:30:12.298"></status>
+</kw>
+<kw name="Select From List By Value" library="Selenium2Library">
+<doc>Selects `*values` from list identified by `locator`</doc>
+<arguments>
+<arg>${INPUT FORGET QUESTION}</arg>
+<arg>${VALID INPUT FORGET QUESTION}</arg>
+</arguments>
+<msg timestamp="20170321 03:30:15.439" level="INFO">Selecting value(s) '6' from list 'question'.</msg>
+<status status="PASS" endtime="20170321 03:30:21.577" starttime="20170321 03:30:15.438"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${INPUT FORGET ANSWER}</arg>
+<arg>${VALID INPUT FORGET ANSWER}</arg>
+</arguments>
+<msg timestamp="20170321 03:30:21.578" level="INFO">Typing text 'kku' into text field 'answer'</msg>
+<status status="PASS" endtime="20170321 03:30:24.686" starttime="20170321 03:30:21.577"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${FORGET BUTTON}</arg>
+</arguments>
+<msg timestamp="20170321 03:30:24.687" level="INFO">Clicking button 'submitForm'.</msg>
+<status status="PASS" endtime="20170321 03:30:28.801" starttime="20170321 03:30:24.686"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${VALID RESET PASSWORD MSG}</arg>
+</arguments>
+<status status="PASS" endtime="20170321 03:30:31.607" starttime="20170321 03:30:28.801"></status>
+</kw>
+<status status="PASS" endtime="20170321 03:30:31.607" starttime="20170321 03:30:09.736"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${INPUT RESET PASSWORD}</arg>
+<arg>${VALID INPUT RESET PASSWORD}</arg>
+</arguments>
+<msg timestamp="20170321 03:30:31.608" level="INFO">Typing text 'KKU@123kku' into text field 'reset_password'</msg>
+<status status="PASS" endtime="20170321 03:30:34.732" starttime="20170321 03:30:31.608"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${INPUT RESET CONFIRM PASSWORD}</arg>
+<arg>${VALID INPUT RESET CONFIRM PASSWORD}</arg>
+</arguments>
+<msg timestamp="20170321 03:30:34.733" level="INFO">Typing text 'KKU@123kku' into text field 'confirm_reset_password'</msg>
+<status status="PASS" endtime="20170321 03:30:37.874" starttime="20170321 03:30:34.732"></status>
+</kw>
+<kw name="Focus" library="Selenium2Library">
+<doc>Sets focus to element identified by `locator`.</doc>
+<arguments>
+<arg>${INPUT RESET PASSWORD}</arg>
+</arguments>
+<status status="PASS" endtime="20170321 03:30:39.896" starttime="20170321 03:30:37.874"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${VALID PASSWORD LENGHT MSG}</arg>
+</arguments>
+<status status="PASS" endtime="20170321 03:30:40.922" starttime="20170321 03:30:39.896"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${VALID PASSWORD UPPERCASE MSG}</arg>
+</arguments>
+<status status="PASS" endtime="20170321 03:30:41.947" starttime="20170321 03:30:40.923"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${VALID PASSWORD LOWERCASE MSG}</arg>
+</arguments>
+<status status="PASS" endtime="20170321 03:30:42.973" starttime="20170321 03:30:41.947"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${VALID PASSWORD NUMBER MSG}</arg>
+</arguments>
+<status status="PASS" endtime="20170321 03:30:44.000" starttime="20170321 03:30:42.973"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${VALID PASSWORD SPECIAL MSG}</arg>
+</arguments>
+<status status="PASS" endtime="20170321 03:30:45.029" starttime="20170321 03:30:44.001"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${VALID MACHING PASSWORD}</arg>
+</arguments>
+<status status="PASS" endtime="20170321 03:30:46.055" starttime="20170321 03:30:45.031"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+<arg>filename=selenium-screenshot-{index}.png</arg>
+</arguments>
+<msg timestamp="20170321 03:30:47.189" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170321 03:30:47.189" starttime="20170321 03:30:46.056"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${RESET BUTTON}</arg>
+</arguments>
+<msg timestamp="20170321 03:30:47.190" level="INFO">Clicking button 'submitPassword'.</msg>
+<status status="PASS" endtime="20170321 03:30:51.324" starttime="20170321 03:30:47.189"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${VALID WELCOME PAGE}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170321 03:30:58.316" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170321 03:30:58.316" starttime="20170321 03:30:57.189"></status>
+</kw>
+<msg timestamp="20170321 03:30:58.327" level="FAIL">Text 'News' did not appear in 5 seconds</msg>
+<status status="FAIL" endtime="20170321 03:30:58.327" starttime="20170321 03:30:51.324"></status>
+</kw>
+<status status="FAIL" endtime="20170321 03:30:58.328" critical="yes" starttime="20170321 03:30:09.735">Text 'News' did not appear in 5 seconds</status>
+</test>
+<test id="s1-t10" name="Not Login : Reset Password not Maching">
+<kw name="Forget Password All Input Valid">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${FORGET LINK}</arg>
+</arguments>
+<msg timestamp="20170321 03:30:58.331" level="INFO">Opening url 'http://10.199.66.227/SoftEn2017/group11/index.php/home/forget_password'</msg>
+<status status="PASS" endtime="20170321 03:31:01.037" starttime="20170321 03:30:58.331"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${INPUT FORGET EMAIL}</arg>
+<arg>${VALID INPUT FORGET EMAIL}</arg>
+</arguments>
+<msg timestamp="20170321 03:31:01.037" level="INFO">Typing text 'komkeao@weshare4u.com' into text field 'emailforget'</msg>
+<status status="PASS" endtime="20170321 03:31:04.191" starttime="20170321 03:31:01.037"></status>
+</kw>
+<kw name="Select From List By Value" library="Selenium2Library">
+<doc>Selects `*values` from list identified by `locator`</doc>
+<arguments>
+<arg>${INPUT FORGET QUESTION}</arg>
+<arg>${VALID INPUT FORGET QUESTION}</arg>
+</arguments>
+<msg timestamp="20170321 03:31:04.191" level="INFO">Selecting value(s) '6' from list 'question'.</msg>
+<status status="PASS" endtime="20170321 03:31:10.314" starttime="20170321 03:31:04.191"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${INPUT FORGET ANSWER}</arg>
+<arg>${VALID INPUT FORGET ANSWER}</arg>
+</arguments>
+<msg timestamp="20170321 03:31:10.314" level="INFO">Typing text 'kku' into text field 'answer'</msg>
+<status status="PASS" endtime="20170321 03:31:13.420" starttime="20170321 03:31:10.314"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${FORGET BUTTON}</arg>
+</arguments>
+<msg timestamp="20170321 03:31:13.420" level="INFO">Clicking button 'submitForm'.</msg>
+<status status="PASS" endtime="20170321 03:31:17.537" starttime="20170321 03:31:13.420"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${VALID RESET PASSWORD MSG}</arg>
+</arguments>
+<status status="PASS" endtime="20170321 03:31:20.273" starttime="20170321 03:31:17.537"></status>
+</kw>
+<status status="PASS" endtime="20170321 03:31:20.273" starttime="20170321 03:30:58.331"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${INPUT RESET PASSWORD}</arg>
+<arg>${VALID INPUT RESET PASSWORD}</arg>
+</arguments>
+<msg timestamp="20170321 03:31:20.275" level="INFO">Typing text 'KKU@123kku' into text field 'reset_password'</msg>
+<status status="PASS" endtime="20170321 03:31:23.383" starttime="20170321 03:31:20.274"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${INPUT RESET CONFIRM PASSWORD}</arg>
+<arg>${INVALID INPUT RESET CONFIRM PASSWORD}</arg>
+</arguments>
+<msg timestamp="20170321 03:31:23.384" level="INFO">Typing text 'kku@123kku1' into text field 'confirm_reset_password'</msg>
+<status status="PASS" endtime="20170321 03:31:26.509" starttime="20170321 03:31:23.384"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${RESET BUTTON}</arg>
+</arguments>
+<msg timestamp="20170321 03:31:26.510" level="INFO">Clicking button 'submitPassword'.</msg>
+<status status="PASS" endtime="20170321 03:31:30.637" starttime="20170321 03:31:26.509"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${VALID PASSWORD LENGHT MSG}</arg>
+</arguments>
+<status status="PASS" endtime="20170321 03:31:32.873" starttime="20170321 03:31:30.637"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${VALID PASSWORD UPPERCASE MSG}</arg>
+</arguments>
+<status status="PASS" endtime="20170321 03:31:33.896" starttime="20170321 03:31:32.873"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">

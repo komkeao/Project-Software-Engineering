@@ -21,7 +21,7 @@ class Donate extends CI_Controller{
     $dtype = $this->input->post('donate_type');
     $usid = '1';
     $ddate = date("Y-m-d H:i:s");
-
+    
     //insert data from insert page to database
     $data_donate = array(
           'donate_name' => $dname,

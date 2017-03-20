@@ -11,10 +11,8 @@
 
     function login($email,$password){
       $query = $this->db->query("SELECT user_id,user_fname,user_lname, user_email FROM user WHERE user_email = '".$email."' AND user_password = '".$password."'");
-      foreach ($query->result_array() as $row)
-      {
-        if($query->num_rows() == 1)
-        {
+      foreach ($query->result_array() as $row){
+        if($query->num_rows() == 1){
           $data = array(
                     'uid'=> $row['user_id'],
                     'email'=> $row['user_email'],
@@ -24,34 +22,37 @@
                   );
           $this->session->set_userdata($data);
           return true;
-        }
-        else
-        {
+        }else{
            return false;
         }
       }
     }
+
+    function login_ajax($email,$password){
+      $query = $this->db->query("SELECT * FROM user WHERE user_email = '".$email."' AND user_password = '".$password."'");
+      foreach ($query->result_array() as $row){
+        if($query->num_rows() == 1){
+          return true;
+        }else{
+           return false;
+        }
+      }
+    }
+
     function search_answer($email,$question,$answer){
       $query = $this->db->query("select user_fname FROM user WHERE user_email = '".$email."' AND question_id = '".$question."' AND user_answer = '".$answer."'");
-      foreach ($query->result_array() as $row)
-      {
-        if($query->num_rows() == 1)
-        {
+      foreach ($query->result_array() as $row){
+        if($query->num_rows() == 1){
           return true;
-        }
-        else
-        {
+        }else{
            return false;
         }
       }
     }
 
     function update_password($password,$email){
-      $data = array(
-        'user_password' => $password
-      );
-      $this->db->where('user_email', $email);
-      $this->db->update('user', $data);
+      $email_ = trim($email);
+      $query = $this->db->query("UPDATE user SET user_password = '".$password."' WHERE user_email = '".$email_."'");
     }
-}
+  }
 ?>

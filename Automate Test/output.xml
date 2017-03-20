@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170320 16:42:14.052" generator="Robot 3.0.2 (Python 2.7.11 on win32)">
+<suite source="C:\xampp\htdocs\SoftEn2\Automate Test\test.robot" id="s1" name="Test">
+<test id="s1-t1" name="Open Browser And Initial Config:">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${URL WELCOME}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170320 16:42:14.213" level="INFO">Opening browser 'Chrome' to base url 'http://localhost/SoftEn2/'</msg>
+<status status="PASS" endtime="20170320 16:42:21.068" starttime="20170320 16:42:14.212"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${VALID WELCOME PAGE}</arg>
+</arguments>
+<status status="PASS" endtime="20170320 16:42:21.099" starttime="20170320 16:42:21.069"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20170320 16:42:21.102" starttime="20170320 16:42:21.100"></status>
+</kw>
+<status status="PASS" endtime="20170320 16:42:21.102" critical="yes" starttime="20170320 16:42:14.211"></status>
+</test>
+<test id="s1-t2" name="Go To Login Modal">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${LOGIN BUTTON}</arg>
+</arguments>
+<msg timestamp="20170320 16:42:21.105" level="INFO">Clicking button 'loginModal'.</msg>
+<status status="PASS" endtime="20170320 16:42:21.257" starttime="20170320 16:42:21.105"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${VALID LOGIN MODAL}</arg>
+</arguments>
+<status status="PASS" endtime="20170320 16:42:21.297" starttime="20170320 16:42:21.260"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20170320 16:42:21.299" starttime="20170320 16:42:21.299"></status>
+</kw>
+<status status="PASS" endtime="20170320 16:42:21.300" critical="yes" starttime="20170320 16:42:21.104"></status>
+</test>
+<test id="s1-t3" name="Go To Forget Page">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>${URL FORGET}</arg>
+</arguments>
+<msg timestamp="20170320 16:42:21.304" level="INFO">Clicking link 'http://localhost/SoftEn2/index.php/home/forget_password'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170320 16:42:22.696" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20170320 16:42:22.697" starttime="20170320 16:42:21.451"></status>
+</kw>
+<msg timestamp="20170320 16:42:22.700" level="FAIL">ElementNotVisibleException: Message: element not visible
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Windows NT 10.0.14393 x86_64)
+</msg>
+<status status="FAIL" endtime="20170320 16:42:22.700" starttime="20170320 16:42:21.303"></status>
+</kw>
+<status status="FAIL" endtime="20170320 16:42:22.701" critical="yes" starttime="20170320 16:42:21.302">ElementNotVisibleException: Message: element not visible
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Windows NT 10.0.14393 x86_64)
+</status>
+</test>
+<status status="FAIL" endtime="20170320 16:42:22.705" starttime="20170320 16:42:14.055"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="2">Critical Tests</stat>
+<stat fail="1" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Test" pass="2">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
