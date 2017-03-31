@@ -17,6 +17,13 @@ class Home extends CI_Controller {
 		$this->load->view('page_footer',$data);
 	}
 
+	function register(){ //เข้าสู่หน้ารีเซ็ตรหัสผ่าน ปล.ถ้าเข้าลิงค์เข้ามาหน้านี้ตรง ๆ จะรีไดเร็คไปหน้าลืมรหัสผ่าน
+		$data['title'] = 'WeShare4U - Register';
+		$data['head'] = 'ลงทะเบียน';
+		$this->load->view('page_header',$data);
+		$this->load->view('page_register',$data);
+		$this->load->view('page_footer');
+	}
 	function login(){
 		$email = $this->input->post('email');
 		$password = $this->input->post('password');
