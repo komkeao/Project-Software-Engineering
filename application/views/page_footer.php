@@ -1,14 +1,25 @@
-      <footer class="page-footer">
-          <div style="text-align:center">
-              <h4>WeShare4U</h4>
-              2017<br>
-              group11@WeShare4U.com
+      </div>
+    </div>
+  </div>
+</div>
+
+  <footer class="footer footer-transparent">
+      <div class="container" align="center">
+          <div class="copyright">
+              WeShare4U <br> &copy; 2017 <br> helloscrumming(at)weshare4u.com
           </div>
-      </footer>
+      </div>
+  </footer>
+</body>
 
-      <script type="text/javascript" src="<?php echo base_url(); ?>js/tether.min.js"></script>
-      <script type="text/javascript" src="<?php echo base_url(); ?>js/bootstrap.min.js"></script>
-      <script type="text/javascript" src="<?php echo base_url(); ?>js/mdb.min.js"></script>
-
-    </body>
+<script src="<?= base_url() ?>assets/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="<?= base_url() ?>assets/js/material.min.js"></script>
+<script src="<?= base_url() ?>assets/js/nouislider.min.js" type="text/javascript"></script>
+<script src="<?= base_url() ?>assets/js/bootstrap-datepicker.js" type="text/javascript"></script>
+<script src="<?= base_url() ?>assets/js/material-kit.js" type="text/javascript"></script>
+<script>
+  $().ready(function(){
+    $(window).on('scroll', materialKit.checkScrollForTransparentNavbar);
+  });
+</script>
 </html>

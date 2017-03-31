@@ -1,139 +1,121 @@
-<?php $this->load->view('page_header'); ?>
-<br>
-<div class="row">
-    <div class="col-lg-1"></div>
-    <div class="col-lg-10">
-      <div class="card card-block" id="register">
-      <div class="divider-new">
-          <h2 class="h2-responsive">สมัครสมาชิก</h2>
-      </div>
+<h2 class="h2-responsive" align="center"><?= $head ?></h2>
+<main>
 
-      <div class="row">
-        <div class="col-md-1"></div>
-        <div class="col-md-10">
+    <!--Main layout-->
+    <div class="container">
+        <div class="row">
 
-          <div class="row">
-            <div class="col-md-1"></div>
-                  <div class="col-md-6">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8">
+              <div class="card card-block" id="loginForm">
+              <form action="<?= base_url() ?>index.php/user/update_password" method="post" id="formPassword">
+                <div class="row">
+                  <div class="col-md-1"></div>
+                        <div class="col-md-5">
+                          <div class="md-form">
+                            <i class="fa fa-lock prefix"></i>
+                            <input type="password" class="form-control" name="password" id="reset_password"  required>
+                            <label>รหัสผ่านใหม่ :</label>
+                          </div>
+                        </div>
+                  <div class="col-md-5">
                     <div class="md-form">
-                      <i class="fa fa-envelope prefix"></i>
-                      <input type="email" class="form-control" name="email" required>
-                      <label>อีเมล์ :</label>
+                      <i class="fa fa-lock prefix"></i>
+                      <input type="password" class="form-control" name="confirm_password" id="confirm_reset_password" required>
+                      <input type="hidden" class="form-control" name="email"
+                      value="<?php if(isset($_SESSION['email']))
+                        {
+                          echo $_SESSION['email'];
+                        }else{
+                          if(isset($_POST['email'])){
+                            echo trim($_POST['email']);
+                          }else{
+                            redirect(base_url().'index.php/home/forget_password');
+                          }
+                        }
+                        ?>" required>
+                      <label>ยืนยันรหัสผ่านใหม่ :</label>
                     </div>
                   </div>
-            <div class="col-md-5"></div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-1"></div>
-            <div class="col-md-5">
-              <div class="md-form">
-                <i class="fa fa-lock prefix"></i>
-                <input type="password" class="form-control" name="password" required>
-                <label>รหัสผ่าน :</label>
-              </div>
-            </div>
-            <div class="col-md-5">
-              <div class="md-form">
-                <i class="fa fa-lock prefix"></i>
-                <input type="password" class="form-control" name="confirm_password" required>
-                <label>ยืนยันรหัสผ่าน :</label>
-              </div>
-            </div>
-            <div class="col-md-1"></div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-1"></div>
-                  <div class="col-md-10">
-                    <div class="md-form">
-                      <input type="text" class="form-control" name="idno" required>
-                      <label>เลขประจำตัวประชาชน :</label>
-                    </div>
+                  <div class="col-md-1"></div>
+                </div>
+                <div class="row">
+                  <div class="col-md-2"></div>
+                  <div class="col-md-5">
+                    <div id="alert_regex"></div>
                   </div>
-            <div class="col-md-1"></div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-1"></div>
-            <div class="col-md-2">
-              <div class="md-form">
-                <select class="mdb-select">
-                  <option value="" disabled selected>คำนำหน้า :</option>
-                  <option value="1">php query</option>
-                </select>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="md-form">
-                <input type="text" name="fname" class="form-control" required>
-                <label>ชื่อ :</label>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="md-form">
-                <input type="text" name="lname" class="form-control" required>
-                <label>นามสกุล :</label>
-              </div>
-            </div>
-            <div class="col-md-1"></div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-1"></div>
-                  <div class="col-md-10">
-                    <div class="md-form">
-                      <textarea type="text" name="address" class="md-textarea" required></textarea>
-                      <label for="form7">ที่อยู่ :</label>
-                    </div>
+                  <div class="col-md-5">
+                    <div id="alert_password"></div>
                   </div>
-            <div class="col-md-1"></div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-1"></div>
-                  <div class="col-md-6">
-                    <div class="md-form">
-                      <input type="text" name="tel" class="form-control" required>
-                      <label>เบอร์โทร :</label>
-                    </div>
-                  </div>
-            <div class="col-md-5"></div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-1"></div>
-            <div class="col-md-5">
-              <div class="md-form">
-                <select class="mdb-select">
-                  <option value="" disabled selected>คำถามของคุณ :</option>
-                  <option value="1">php query</option>
-                </select>
               </div>
-            </div>
-            <div class="col-md-5">
-              <div class="md-form">
-                <input type="text" name="answer" class="form-control" required>
-                <label>คำตอบ</label>
-              </div>
-            </div>
-            <div class="col-md-1"></div>
+              <br>
+                <div class="row">
+                  <div class="col-md-2"></div>
+                        <div class="col-md-3">
+                          <button type="submit" id="submitPassword"  class="btn btn-info">Submit</button>
+                        </div>
+                  <div class="col-md-7"></div>
+                </div>
+            </form>
           </div>
-
-
-
+            </div>
+            <div class="col-lg-2"></div>
         </div>
-        <div class="col-md-1"></div>
-      </div>
-
     </div>
-  </div>
-  <div class="col-lg-1"></div>
-</div>
-<br>
+</main>
 <script>
-  $(document).ready(function() {
-    $('.mdb-select').material_select();
-  });
+    $(document).ready(function() {
+       $("#reset_password").blur(function(event){
+         event.preventDefault();
+         var password = $('#reset_password').val();
+         var confirm_password = $('#confirm_reset_password').val();
+         console.log(password + "              " + confirm_password);
+         $.ajax({
+           url: "<?= base_url() ?>index.php/home/check_regex",
+           type : "POST",
+           data : {'password': password, 'confirm_password': confirm_password},
+           dataType: "json",
+           success: function(response) {
+             $("#alert_regex").html(response.msg1);
+             $("#alert_password").html(response.msg3);
+           }
+         });
+       });
+       $("#confirm_reset_password").blur(function(event){
+         event.preventDefault();
+         var password = $('#reset_password').val();
+         var confirm_password = $('#confirm_reset_password').val();
+          console.log(password + "              " + confirm_password);
+         $.ajax({
+           url: "<?= base_url() ?>index.php/home/check_regex",
+           type : "POST",
+           data : {'password': password, 'confirm_password': confirm_password},
+           dataType: "json",
+           success: function(response) {
+             $("#alert_regex").html(response.msg1);
+             $("#alert_password").html(response.msg3);
+           }
+         });
+       });
+       $("#submitPassword").click(function(event){
+         event.preventDefault();
+         var password = $('#reset_password').val();
+         var confirm_password = $('#confirm_reset_password').val();
+          console.log(password + "              " + confirm_password);
+         $.ajax({
+           url: "<?= base_url() ?>index.php/home/check_regex",
+           type : "POST",
+           data : {'password': password, 'confirm_password': confirm_password},
+           dataType: "json",
+           success: function(response) {
+             $("#alert_regex").html(response.msg1);
+             $("#alert_password").html(response.msg3);
+             if(response.msg2=='TTTTTT'){
+                $('#formPassword').submit();
+             }
+           }
+         });
+       });
+     });
+
 </script>
-<?php $this->load->view('page_footer'); ?>

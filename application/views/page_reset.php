@@ -1,3 +1,4 @@
+<h2 class="h2-responsive" align="center"><?= $head ?></h2>
 <main>
 
     <!--Main layout-->
@@ -7,10 +8,6 @@
             <div class="col-lg-2"></div>
             <div class="col-lg-8">
               <div class="card card-block" id="loginForm">
-                <div class="divider-new">
-                    <h2 class="h2-responsive"><?= $head ?></h2>
-                </div>
-                <br>
               <form action="<?= base_url() ?>index.php/user/update_password" method="post" id="formPassword">
                 <div class="row">
                   <div class="col-md-1"></div>
@@ -25,13 +22,13 @@
                     <div class="md-form">
                       <i class="fa fa-lock prefix"></i>
                       <input type="password" class="form-control" name="confirm_password" id="confirm_reset_password" required>
-                      <input type="hidden" class="form-control" name="email"  value="
-                      <?php if(isset($_SESSION['email']))
+                      <input type="hidden" class="form-control" name="email"
+                      value="<?php if(isset($_SESSION['email']))
                         {
                           echo $_SESSION['email'];
                         }else{
                           if(isset($_POST['email'])){
-                            echo $_POST['email'];
+                            echo trim($_POST['email']);
                           }else{
                             redirect(base_url().'index.php/home/forget_password');
                           }
@@ -55,7 +52,7 @@
                 <div class="row">
                   <div class="col-md-2"></div>
                         <div class="col-md-3">
-                          <button type="submit" id="submitPassword"  class="btn btn-primary">Submit</button>
+                          <button type="submit" id="submitPassword"  class="btn btn-info">Submit</button>
                         </div>
                   <div class="col-md-7"></div>
                 </div>
@@ -119,7 +116,6 @@
            }
          });
        });
-
-
      });
+
 </script>
